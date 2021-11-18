@@ -1,0 +1,89 @@
+{
+    "name": "ELMUSLIM",
+    "logo": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg",
+    "description": "ELMUSLIM Music Voice Chat.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/legyouu/muslimmusic",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "حط كود ترمكس !!",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "حط توكن البوت !",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "إحط اسم البوت",
+            "required": false,
+            "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "يوزر البوت من غير -> @",
+            "required": true,
+            "value": "MS_32BOT"
+        },
+        "ASSISTANT_NAME": {
+            "description": "يوزر الحساب المساعد ->  @",
+            "required": true,
+            "value": "L190N"
+        },
+        "BG_IMAGE": {
+            "description": "صوره لبوت",
+            "required": false,
+            "value": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg"
+        },
+        "THUMB_IMG": {
+            "description": "سيبــها زي مهي  -> bg_image",
+            "required": false,
+            "value": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg"
+        },
+        "OWNER_NAME": {
+            "description": "يوزرك منغير -> @",
+            "required": false,
+            "value": "L120N"
+        },
+        "API_ID": {
+            "description": "حــط App ID from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "حــط Api hash from my.telegram.org/apps",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "ايدي ادمن البوت",
+            "required": true
+            "value": "1236115319"
+        },
+        "DURATION_LIMIT": {
+            "description": "max",
+            "required": true,
+            "value": "60"
+        },
+        "PMPERMIT": {
+            "description": "سبها زي مهيا",
+            "required": false,
+            "value": "ENABLE"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "تحديثات البوت ",
+            "required": false,
+            "value": "UU_Le2"
+        },
+        "GROUP_SUPPORT": {
+            "description": "جروب الدعم",
+            "required": false,
+            "value": "UU_Le0"
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
