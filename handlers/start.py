@@ -1,4 +1,4 @@
-#elnqyb
+#ليجاند
 from time import time
 from datetime import datetime
 from config import BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
@@ -33,33 +33,32 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>♡ مرحباً بك عزيزي  {message.from_user.first_name} \n
-♡ [{BOT_NAME}](https://t.me/{BOT_USERNAME}) في بوت 
-♡ بوت تشغيل الاغاني  في المكالمه ' الجماعيه
-♡قم برفع البوت مشرف مع صلاحيه اضافه مستخدمين عبر الرابط
-لمعرفه الأوامر اضغط /help 
-♡  Dev By [LeGenD](https://t.me/L120N)!**
+        f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴩ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ !**
+💡 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ >> 📚 ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ !**
+❓ **ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ ᴀɴᴅ ᴘʟᴀʏ ᴍᴜsɪᴄ ғʀᴇᴇʟʏ /help**
+✂ **ɪ ᴡᴀs ᴍᴀᴅᴇ ʙʏ ѕᴀʟᴇᴍ & ᴜғᴏ ғᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴄɢ**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "اضافه البوت اللي مجموعتك ⁦♡⁩", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "Updates", url="https://t.me/UU_Le0"
+                         "📚 ᴄᴏᴍᴍᴀɴᴅs", url="https://t.me/UU_Le2"
                     ),
                     InlineKeyboardButton(
-                        "𝑫𝒆𝒗♡", url=f"https://t.me/{OWNER_NAME}")
+                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ 💗", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "GROUP", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")               
+                        "📣 ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")               
                  ],[
                     InlineKeyboardButton(
-                        "!! 𝒂𝒉𝒎𝒆𝒅 𝒆𝒍𝒏𝒒𝒚𝒃 .𖤐 ", url="https://t.me/L120N"
+                        "💌", url="https://github.com/legyouu"
                     )
                 ]
             ]
@@ -74,15 +73,30 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✔ **البوت قيد التشغيل الان**\n<b>💞 **وقت تشغيل البوت :**</b> `{uptime}`""",
+        f"""✔ **ʙᴏᴛ ɪs ʀᴜɴɴɪɴɢ**\n<b>☣ **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "GROUP", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ]
+            ]
+        )
+    )
+
+@Client.on_message(command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+async def help(client: Client, message: Message):
+    await message.reply_text(
+        f"""<b>☢ ʜᴇʟʟᴏ {message.from_user.mention()}, ᴘʟᴇᴀsᴇ ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ ʏᴏᴜ ᴄᴀɴ ʀᴇᴀᴅ ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="✔ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?start=help"
                     )
                 ]
             ]
@@ -92,101 +106,64 @@ async def start(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>• الاوامر 
-
-- /play <اسم الأغنية> 
-ـ تشغيل الأغنية التي طلبتها. 
-
-- /playlist 
-ـ عرض قائمة التشغيل الآن. 
-
-- /song <اسم الاغنيه>
-ـ تنزيل الأغاني التي تريدها بسرعة. 
-
-- /search <اسم الاغنيه> 
-ـ البحث في اليوتيوب مع التفاصيل. 
-
-- /vsong <اسم الاغنيه>
-ـ تنزيل مقاطع الفيديو التي تريدها بسرعة
-
-- /lyric <اسم الاغنيه>
-ـ إحضار كلمات الاغنيه. 
-
-• الاوامر الخاصه بِ المشرفين فقط . 
- 
-- /player  
-ـ فتح لوحة إعدادات مشغل الموسيقى
-
-- /pause 
-ـ وقف تشغيل الاغنيه الحاليه. 
-
-- /resume
-ـ استئناف تشغيل الأغنية. 
-
-- /skip 
-ـ التقدم للأغنية التالية
-
-- /end 
-ـ إيقاف تشغيل الموسيقى. 
-
-- /musicplayer on 
-ـ لتعطيل مشغل الموسيقى في مجموعتك. 
-
-- /musicplayer off 
-- لتمكين مشغل الموسيقى في مجموعتك. 
-
-- /userbotjoin 
-- دعوة المساعد إلى الدردشه الحاليه 
-
-- /userbotleave 
-- إزالة المساعد من الدردشة الحالية. 
-
-- /reload 
-- تحديث قائمة الإدارة. 
-
-- /uptime 
-- التحقق من وقت تشغيل البوت
-
-- /ping 
-- تحقق من حالة البوت 
-
-• الاوامر الخاصه بالمطورين
-
-- /pmpermit on | off  
-ـ قفل/فتح الدردشه ف الخاص. 
-
-- /userbotleaveall 
-- اطلب من المساعد مغادرة جميع المجموعات
-
-- /gcast 
-- عمل إذاعه
-
-• الشات الخاص بالبوت المساعد 
-
-- .yes 
-- الموافقة على إرسال رسالة إلى المساعد في الخاص. 
-
-- .no 
-- رفض إرسال رسالة إلى المساعد في الخاص.
+        f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
+\n📙 HOW TO USE ME ?
+\n1. first add me to your group.
+2. promote me as admin and give all permission.
+3. then, add @{ASSISTANT_NAME} to your group or type /userbotjoin.
+3. make sure you turn on the voice chat first before start playing music.
+\n🖤 **commands for all user:**
+\n/play (song name) - play song from youtube
+/stream (reply to audio) - play song using audio file
+/playlist - show the list song in queue
+/song (song name) - download song from youtube
+/search (video name) - search video from youtube detailed
+/vsong (video name) - download video from youtube detailed
+/lyric - (song name) lyrics scrapper
+/vk (song name) - download song from inline mode
+\n✨ **commands for admins:**
+\n/player - open music player settings panel
+/pause - pause the music streaming
+/resume - resume the music was paused
+/skip - skip to the next song
+/end - stop music streaming
+/userbotjoin - invite assistant join to your group
+/reload - for refresh the admin list
+/cache - for cleared admin cache
+/auth - authorized user for using music bot
+/deauth - unauthorized for using music bot
+/musicplayer (on / off) - disable / enable music player in your group
+\n🔮 channel streaming commands:
+\n/cplay - stream music on channel voice chat
+/cplayer - show the song in streaming
+/cpause - pause the streaming music
+/cresume - resume the streaming was paused
+/cskip - skip streaming to the next song
+/cend - end the streaming music
+/admincache - refresh the admin cache
+\n🧸 command for sudo users:
+\n/userbotleaveall - order the assistant to leave from all group
+/gcast - send a broadcast message trought the assistant
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "GROUP", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "CHANEL", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Dev", url=f"https://t.me/L120N"
+                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ  💗", url=f"https://t.me/L120N"
                     )
                 ]
             ]
         )
     )
+
 
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
@@ -194,8 +171,8 @@ async def ping_pong(client: Client, message: Message):
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "🖱️ `ᴘᴏɴɢ!!`\n"
-        f"♡ `{delta_ping * 1000:.3f} ᴍs`"
+        "✈ `ᴘᴏɴɢ!!`\n"
+        f"☣ `{delta_ping * 1000:.3f} ᴍs`"
     )
 
 
@@ -206,7 +183,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        " ʙᴏᴛ sᴛᴀᴛᴜs:\n"
-        f"➢♡ **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-        f"➢♡ **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
+        "🤖 ʙᴏᴛ sᴛᴀᴛᴜs:\n"
+        f"➤ **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
+        f"➤ **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
     )

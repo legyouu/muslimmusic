@@ -27,10 +27,10 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="📣 ᴄʜᴀɴɴᴇʟ",
+                        text="ᴄʜᴀɴɴᴇʟ",
                         url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton(
-                        text="♞ ᴅᴇᴠ's",
+                        text="ᴅᴇᴠ",
                         url=f"https://t.me/{OWNER_NAME}")
                 ]
             ]
@@ -53,7 +53,7 @@ async def stream(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("♨ ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ɢɪᴠᴇ ᴍᴇ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ʏᴛ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ!")
+        return await lel.edit_text("🔮 ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ɢɪᴠᴇ ᴍᴇ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ʏᴛ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)

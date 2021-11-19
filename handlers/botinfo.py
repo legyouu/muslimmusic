@@ -7,9 +7,9 @@ class Messages():
     ".",
 f"""
 **󠁧󠁢󠁥󠁮󠁧󠁿✨ {BOT_NAME} information panel ✨ \n
-💭 as you know, Ufo music is a telegram music bot project for streaming music on telegram voice chat group feature.\n
-💠 Ufo music project was founded on April 12, 2020, we created a music bot project for streaming on telegram voice chat, which is now known as Ufo music bot.\n
-🧪 Ufo music version:
+💭 as you know,  music is a telegram music bot project for streaming music on telegram voice chat group feature.\n
+💠  music project was founded on April 12, 2020, we created a music bot project for streaming on telegram voice chat, which is now known as Ufo music bot.\n
+🧪  music version:
 ❍ ver.6.0
 ❍ beta-version \n
 👩🏻‍💻 developer:

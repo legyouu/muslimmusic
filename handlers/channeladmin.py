@@ -74,7 +74,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("♨ sᴛʀᴇᴀᴍɪɴɢ ᴇɴᴅᴇᴅ!")
+        await message.reply_text("🔮 sᴛʀᴇᴀᴍɪɴɢ ᴇɴᴅᴇᴅ!")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -91,7 +91,7 @@ async def skip(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("♨ ɴᴏᴛʜɪɴɢ ᴛᴏ sᴋɪᴘ!")
+        await message.reply_text("🔮 ɴᴏᴛʜɪɴɢ ᴛᴏ sᴋɪᴘ!")
     else:
         callsmusic.queues.task_done(chat_id)
 
