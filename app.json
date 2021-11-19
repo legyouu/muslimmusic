@@ -1,48 +1,48 @@
 {
-    "name": "ELMUSLIM",
+    "name": "DEVELOPER LEGEND",
     "logo": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg",
-    "description": "ELMUSLIM Music Voice Chat.",
+    "description": "Music Voice Chat.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/legyouu/muslimmusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
-            "description": "حط كود ترمكس !!",
+            "description": "حط كود الجلســـة بتاعتــك !!",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "حط توكن البوت !",
+            "description": "توكــن بوتـــك !",
             "required": true
         },
         "BOT_NAME": {
-            "description": "إحط اسم البوت",
+            "description": "إســـم بوتــك !.",
             "required": false,
             "value": ""
         },
         "BOT_USERNAME": {
-            "description": "يوزر البوت من غير -> @",
+            "description": "يوزر نيــم بوتــك منغيــر -> @",
             "required": true,
-            "value": "MS_32BOT"
+            "value": ""
         },
         "ASSISTANT_NAME": {
-            "description": "يوزر الحساب المساعد ->  @",
+            "description": "يوزر نيــم أسيستانتــ بوتـ منغيــر ->  @",
             "required": true,
-            "value": "L190N"
+            "value": ""
         },
         "BG_IMAGE": {
-            "description": "صوره لبوت",
+            "description": "خلــفية",
             "required": false,
-            "value": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg"
+            "value": ""
         },
         "THUMB_IMG": {
-            "description": "سيبــها زي مهي  -> bg_image",
+            "description": "سيبــها زي مهي عادي يبا -> bg_image",
             "required": false,
             "value": "https://telegra.ph/%D9%84%D9%8A%D8%AC%D8%A7%D9%86%D8%AF-11-18-2.jpg"
         },
         "OWNER_NAME": {
-            "description": "يوزرك منغير -> @",
+            "description": "حط يوزركـــ منغــير -> @",
             "required": false,
-            "value": "L120N"
+            "value": ""
         },
         "API_ID": {
             "description": "حــط App ID from my.telegram.org/apps",
@@ -53,9 +53,8 @@
             "required": true
         },
         "SUDO_USERS": {
-            "description": "ايدي ادمن البوت",
+            "description": "قايــمة الســودو",
             "required": true
-            "value": "1236115319"
         },
         "DURATION_LIMIT": {
             "description": "max",
@@ -63,24 +62,24 @@
             "value": "60"
         },
         "PMPERMIT": {
-            "description": "سبها زي مهيا",
+            "description": "سيــبها.",
             "required": false,
             "value": "ENABLE"
         },
         "UPDATES_CHANNEL": {
-            "description": "تحديثات البوت ",
+            "description": "تحديثاتــ السورس",
             "required": false,
-            "value": "UU_Le2"
+            "value": ""
         },
         "GROUP_SUPPORT": {
-            "description": "جروب الدعم",
+            "description": "جروبــ الدعــم",
             "required": false,
-            "value": "UU_Le0"
+            "value": ""
         }
     },
     "buildpacks": [
     {
-      "url": "https://github.com/legyouu/muslimmusic"
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     },
     {
       "url": "heroku/python"
