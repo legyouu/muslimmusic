@@ -80,7 +80,7 @@
     },
     "buildpacks": [
     {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+      "url": "https://github.com/legyouu/muslimmusic"
     },
     {
       "url": "heroku/python"
